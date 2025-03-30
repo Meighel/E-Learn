@@ -44,9 +44,13 @@ function loadQuestion() {
     if (currentQuestionIndex >= quizData.length) {
         document.getElementById("quiz-box").innerHTML = `<h3>Quiz Completed</h3> 
         <p>Your Final Score: ${score} / ${quizData.length}</p>`;
-        
-        document.getElementById("next-btn").classList.add("hide");
+
+        // Ensure the "Next Question" (Submit) button is completely hidden
+        document.getElementById("next-btn").style.display = "none";  
+
+        // Show only the "Restart Quiz" button
         document.getElementById("restart-btn").classList.remove("hide");
+
         localStorage.setItem("quizScore", score);
         document.getElementById("score").parentElement.style.display = "none";
         return;
@@ -68,7 +72,7 @@ function loadQuestion() {
 
     document.getElementById("feedback").innerText = "";
 
-    // Change button text if it's the last question
+    // Ensure "Next Question" button only shows if the quiz is NOT done
     if (currentQuestionIndex === quizData.length - 1) {
         document.getElementById("next-btn").innerText = "Submit";
     } else {
@@ -76,8 +80,10 @@ function loadQuestion() {
     }
 
     document.getElementById("next-btn").classList.add("hide");
+    document.getElementById("next-btn").style.display = "block";  // Ensure it's visible when needed
     resetTimer();
 }
+
 
 
 function resetTimer() {
