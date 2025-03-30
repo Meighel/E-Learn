@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="card mb-4">
                         <div class="card-body">
                             <h5 class="card-title">${post.title}</h5>
-                            <p class="card-text">${post.body}</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
+                            <p class="card-text">${post.body.substring(0, 100)}...</p>
+                            <a href="article.html?id=${post.id}" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                 `;
@@ -19,3 +19,4 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error fetching blog posts:", error));
 });
+

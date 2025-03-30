@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - E-Learn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="dashboard.html" class="navbar-brand text-warning">E-Learn</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 id="article-title" class="fw-bold text-center"></h2>
+        <p id="article-body" class="mt-3"></p>
+        <a href="blog.html" class="btn btn-secondary mt-3">Back to Blog</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const postId = params.get("id");
+    
+            if (postId) {
+                fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+                    .then(response => response.json())
+                    .then(post => {
+                        document.getElementById("article-title").innerText = post.title;
+    
+                        const articleBody = document.getElementById("article-body");
+                        articleBody.innerHTML = `
+                            <p>${post.body}</p>
+                            <p>${generateExtraParagraphs(post.body)}</p>
+                            <p>${generateExtraParagraphs(post.body)}</p>
+                            <p>${generateExtraParagraphs(post.body)}</p>
+                            <p>${generateExtraParagraphs(post.body)}</p>
+                        `;
+                    })
+                    .catch(error => console.error("Error fetching article:", error));
+            } else {
+                document.getElementById("article-title").innerText = "Article Not Found";
+                document.getElementById("article-body").innerText = "The article you are looking for does not exist.";
+            }
+        });
+    
+        function generateExtraParagraphs(baseText) {
+            return `${baseText} This is an extended analysis of the topic, providing deeper insights and additional perspectives. The significance of this discussion cannot be overstated, as it affects various industries and influences future trends. Furthermore, ongoing research continues to uncover new developments, adding to the existing knowledge base.`;
+        }
+    </script>
+    
+</body>
+</html>
