@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(227, 240, 236) !important;
+}
+
+#main-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; 
+}
+
+#main-content h2 {
+    margin: 10px;
+}
+
+.navbar-brand {
+    color:antiquewhite !important;
+}
+
+#current-datetime{
+    color: black !important;
+    font-size: medium;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(70, 72, 72) !important;
+}
+
+.nav-item a:hover {
+    color: azure;
+}
+
+
+.navbar-toggler {
+    color: whitesmoke !important;
+}
+
+.card {
+    background-color: black !important;
+    color: whitesmoke !important;
+}
+
+.container {
+    margin-top: 70px; 
+}
+
+footer {
+    margin-top: 10%;
+    font-size: small;
+    padding: 0 !important;
+    background: linear-gradient(to right, #ea8fe4, #94eee5);
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.social-icons i {
+    font-size: 16px;
+}
