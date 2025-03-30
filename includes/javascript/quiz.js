@@ -152,3 +152,5 @@ document.getElementById("next-btn").addEventListener("click", nextQuestion);
 document.getElementById("restart-btn").addEventListener("click", restartQuiz);
 
 startQuiz();
+
+

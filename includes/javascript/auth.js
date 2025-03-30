@@ -21,8 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     username, 
                     email, 
                     password, 
-                    quizzesTaken: 0, 
-                    articlesRead: 0, 
                     profilePic: "default-avatar.png"
                 };
                 localStorage.setItem(email, JSON.stringify(user));
@@ -65,8 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("profile-username").innerText = user.username;
                 document.getElementById("profile-username-display").innerText = user.username;
                 document.getElementById("profile-email").innerText = user.email;
-                document.getElementById("quiz-count").innerText = user.quizzesTaken;
-                document.getElementById("article-count").innerText = user.articlesRead;
                 document.getElementById("profile-img").src = user.profilePic;
 
             } else {
