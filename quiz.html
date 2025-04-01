@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz - E-Learn</title>
+    <title>Select a Quiz - E-Learn</title>
     <link rel="stylesheet" href="includes/css/quizstyle.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
-    
-    <nav class="navbar navbar-expand-lg" >
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <a class="navbar-brand text-warning" href="dashboard.html">E-Learn</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <span class="navbar-brand">
-                <a href="dashboard.html" class="text-warning text-decoration-none">E-Learn</a> Quiz
-            </span>            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="quiz.html">Quizzes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="quiz.html">Quizzes</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link text-danger" id="logout-btn"> <i class="bi bi-power"></i> Logout</a></li>
                 </ul>
@@ -29,37 +26,38 @@
         </div>
     </nav>
     
-
-            <!-- Main Content -->
-            <main id="main-content" class="container mt-4">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h2>QUIZ</h2>
-                    <h5 id="current-datetime" class="text-muted"></h5>
-                </div>
-                
-
-                <div class="card p-5 mb-4">
-                    <section id="quiz" class="container text-center mt-5">
-                        <h2 class="fw-bold">Quiz</h2>
-                        <p>Test your knowledge with this interactive quiz!</p>
-                        <br>
-                        <div id="quiz-box" class="quiz-container p-4 bg-light rounded">
-                            <p id="timer" class="text-danger"><b>Time Left: </b><span id="time">15</span> sec</p>
-                            <p id="question" class="fw-bold"></p>
-                            <div id="options" class="btn-group-vertical w-100"></div>
-                            <p id="feedback" class="mt-2 fw-bold"></p>
-                        </div>
-                    
-                        <button id="next-btn" class="btn btn-primary mt-3 hide">Next Question</button>
-                    
-                        <p class="mt-3">Score: <span id="score">0</span></p>
-                        <button id="restart-btn" class="btn btn-danger mt-3 hide">Restart Quiz</button>
-                    </section>                   
-                </div>
-            </main>
+    <main class="container mt-5">
+        <h2 class="fw-bold text-center">Choose a Quiz Category</h2>
+        <p class="text-center">Select a quiz topic to begin.</p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center mt-4">
+            <a href="quiz_page.html?category=9" class="btn btn-secondary p-3 w-100 w-md-50 w-lg-25">📚 General Knowledge</a>
+            <a href="quiz_page.html?category=10" class="btn btn-primary p-3 w-100 w-md-50 w-lg-25">📖 Books</a>
+            <a href="quiz_page.html?category=11" class="btn btn-info p-3 w-100 w-md-50 w-lg-25">🎬 Film</a>
+            <a href="quiz_page.html?category=12" class="btn btn-danger p-3 w-100 w-md-50 w-lg-25">🎵 Music</a>
+            <a href="quiz_page.html?category=13" class="btn btn-warning p-3 w-100 w-md-50 w-lg-25">🎭 Musicals & Theatres</a>
+            <a href="quiz_page.html?category=14" class="btn btn-dark p-3 w-100 w-md-50 w-lg-25">📺 Television</a>
+            <a href="quiz_page.html?category=15" class="btn btn-primary p-3 w-100 w-md-50 w-lg-25">🎮 Video Games</a>
+            <a href="quiz_page.html?category=16" class="btn btn-success p-3 w-100 w-md-50 w-lg-25">🎲 Board Games</a>
+            <a href="quiz_page.html?category=17" class="btn btn-secondary p-3 w-100 w-md-50 w-lg-25">🌿 Science & Nature</a>
+            <a href="quiz_page.html?category=18" class="btn btn-warning p-3 w-100 w-md-50 w-lg-25">💻 Computers</a>
+            <a href="quiz_page.html?category=19" class="btn btn-info p-3 w-100 w-md-50 w-lg-25">📊 Mathematics</a>
+            <a href="quiz_page.html?category=20" class="btn btn-dark p-3 w-100 w-md-50 w-lg-25">🔱 Mythology</a>
+            <a href="quiz_page.html?category=21" class="btn btn-primary p-3 w-100 w-md-50 w-lg-25">⚽ Sports</a>
+            <a href="quiz_page.html?category=22" class="btn btn-success p-3 w-100 w-md-50 w-lg-25">🌍 Geography</a>
+            <a href="quiz_page.html?category=23" class="btn btn-danger p-3 w-100 w-md-50 w-lg-25">📜 History</a>
+            <a href="quiz_page.html?category=24" class="btn btn-warning p-3 w-100 w-md-50 w-lg-25">🏛️ Politics</a>
+            <a href="quiz_page.html?category=25" class="btn btn-secondary p-3 w-100 w-md-50 w-lg-25">🎨 Art</a>
+            <a href="quiz_page.html?category=26" class="btn btn-info p-3 w-100 w-md-50 w-lg-25">🌟 Celebrities</a>
+            <a href="quiz_page.html?category=27" class="btn btn-success p-3 w-100 w-md-50 w-lg-25">🐾 Animals</a>
+            <a href="quiz_page.html?category=28" class="btn btn-danger p-3 w-100 w-md-50 w-lg-25">🚗 Vehicles</a>
+            <a href="quiz_page.html?category=29" class="btn btn-dark p-3 w-100 w-md-50 w-lg-25">📖 Comics</a>
+            <a href="quiz_page.html?category=30" class="btn btn-warning p-3 w-100 w-md-50 w-lg-25">🛠️ Gadgets</a>
+            <a href="quiz_page.html?category=31" class="btn btn-primary p-3 w-100 w-md-50 w-lg-25">🎌 Anime & Manga</a>
+            <a href="quiz_page.html?category=32" class="btn btn-secondary p-3 w-100 w-md-50 w-lg-25">📺 Cartoons & Animation</a>
         </div>
-    </div>
-
+        
+    </main>
+    
     <footer class="bg-dark text-white text-center py-2">
         <p class="mb-0">&copy; 2025 E-Learn
             <a href="blog.html" class="text-white me-2"> | Blog</a>
@@ -72,10 +70,6 @@
         </div>
     </footer>
     
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <script src="includes/javascript/auth.js"></script>
-    <script src="includes/javascript/quiz.js"></script> 
-    <script src="includes/javascript/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

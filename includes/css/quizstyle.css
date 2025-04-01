@@ -1,3 +1,36 @@
+html, body {
+    height: 100%; 
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; 
+}
+
+footer {
+    font-size: small;
+    padding: 0 !important;
+    background: linear-gradient(to right, #ea8fe4, #94eee5);
+    text-align: center; 
+    margin-top: auto; 
+    margin-top: 5%;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.social-icons i {
+    font-size: 16px;
+}
+
+.col-md-6 {
+    margin-bottom: 10%;
+}
+
 .correct {
     background-color: green !important;
     color: white !important;
@@ -16,18 +49,7 @@
     color: black !important;
 }
 
-footer {
-    margin-top: 10%;
-    font-size: small;
-    padding: 0 !important;
-    background: linear-gradient(to right, #ea8fe4, #94eee5);
-}
-
 footer a {
     text-decoration: none;
     font-size: 14px;
-}
-
-.social-icons i {
-    font-size: 16px;
 }
