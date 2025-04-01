@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     username, 
                     email, 
                     password, 
-                    profilePic: "default-avatar.png"
+                    profilePic: "default-avatar.png",
+                    bio: ""
                 };
                 localStorage.setItem(email, JSON.stringify(user));
                 alert("Registration Successful! Redirecting to login...");
@@ -64,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("profile-username-display").innerText = user.username;
                 document.getElementById("profile-email").innerText = user.email;
                 document.getElementById("profile-img").src = user.profilePic;
+                document.getElementById("profile-bio").innerText = user.bio || "No bio set";
 
             } else {
                 alert("User data not found! Try logging in again.");
@@ -81,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             let newUsername = document.getElementById("update-username").value.trim();
             let newEmail = document.getElementById("update-email").value.trim();
+            let newBio = document.getElementById("update-bio").value.trim();
 
             let loggedInEmail = sessionStorage.getItem("loggedInUser");
             let user = JSON.parse(localStorage.getItem(loggedInEmail));
@@ -91,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (newUsername) user.username = newUsername;
+            if (newBio) user.bio = newBio;
 
             if (newEmail && newEmail !== loggedInEmail) {
                 localStorage.removeItem(loggedInEmail); 
